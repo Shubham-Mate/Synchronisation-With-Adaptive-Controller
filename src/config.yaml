@@ -1,0 +1,8 @@
+rossler_params:
+  a: 35
+  b: 3
+  c: 28
+
+solver_params:
+  h: 0.01
+  t: 5
