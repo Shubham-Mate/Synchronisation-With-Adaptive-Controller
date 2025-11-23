@@ -33,3 +33,13 @@ def chen_master_slave_system_with_adaptive_control(time, state):
     dc = e_x * e_y + e_y**2
 
     return np.array([dx1, dy1, dz1, dx2, dy2, dz2, da, db, dc])
+
+
+def chen_system(time, state):
+    x1, y1, z1 = state[0:3]
+
+    dx1 = a * (y1 - x1)
+    dy1 = (c - a) * x1 - x1 * z1 + c * y1
+    dz1 = x1 * y1 - b * z1
+
+    return np.array([dx1, dy1, dz1])
